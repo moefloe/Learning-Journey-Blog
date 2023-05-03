@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    font-family: "Source Sans Pro", "sans-serif";
+}
+
+/* Typography and text styling*/
+
+#logo {
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    display: flex;
+    gap: 2px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 1em 0em;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.date-txt {
+    text-transform: uppercase;
+    margin: 1em 0em;
+}
+
+.hero-txt-container h1,
+.hero-txt-container p {
+    color: white;
+}
+
+.hero-txt-container:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .hero-txt-container p {
+        max-width: 50vw;
+    }
+}
+
+#view-more {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+    margin: -1em 0em 4em;
+}
+
+/* Navigation styling */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+}
+
+#nav-links-container {
+    display: none;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.visible {
+    display: flex !important;
+}
+
+#mobile-nav-container {
+    display: none;
+    flex-direction: column;
+    width: 95%;
+    height: 50%;
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    z-index: 99;
+}
+
+#mobile-nav-container a {
+    font-size: 1em;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+#hamburger-btn {
+    display: block;
+    font-size: 2em;
+}
+
+#hamburger-btn:focus,
+#hamburger-btn:active {
+    border: 1px solid blue;
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 0 2em;
+    }
+
+    #hamburger-btn {
+        display: none;
+    }
+
+    #nav-links-container {
+        display: flex;
+        gap: 2em;
+    }
+
+    #nav-links-container a {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    #nav-links-container li:hover,
+    #nav-links-container li:focus,
+    .blog-card:hover,
+    #view-more:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+
+/* Image styling */
+
+.img-block {
+    height: 45vh;
+}
+
+.img-block img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Layout styling */
+
+#hero {
+    width: 100vw;
+    height: 70vh;
+    background: url("../images/half-laptop.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        height: 75vh;
+    }
+}
+
+.hero-txt-container {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    padding-right: 1em;
+}
+
+#blog-posts-grid {
+    padding: 1em;
+}
+
+@media (min-width: 768px) {
+    #blog-posts-grid {
+        padding: 3.75em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2em;
+    }
+}
+
+.blog-card:hover {
+    cursor: pointer;
+}
+
+/* Footer Styling*/
+
+footer {
+    background: #d0daee;
+    position: fixed;
+    height: 14px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+footer p {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
+}
