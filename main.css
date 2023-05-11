@@ -8,17 +8,22 @@
 body {
     width: 100vw;
     font-family: "Source Sans Pro", "sans-serif";
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+section {
+    padding: 0px 1em;
 }
 
 /* Typography and text styling*/
 
-#logo {
+#logo-container h1 {
     font-size: 1.25em;
     line-height: 1.25em;
     font-weight: 800;
     letter-spacing: -1.5px;
-    display: flex;
-    gap: 2px;
 }
 
 p {
@@ -71,7 +76,12 @@ a {
     font-size: 0.9em;
     font-weight: 700;
     text-align: center;
-    margin: -1em 0em 4em;
+    margin: 1em 0em 4em;
+}
+
+#view-more:hover,
+#view-more:active {
+    cursor: pointer;
 }
 
 /* Navigation styling */
@@ -81,6 +91,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 4em;
+    padding: 0 1.5em;
 }
 
 #nav-links-container {
@@ -168,13 +179,19 @@ nav {
 
 /* Layout styling */
 
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 #hero {
-    width: 100vw;
-    height: 70vh;
-    background: url("../images/half-laptop.jpg");
+    background: url("./images/half-laptop.jpg");
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 1em;
 }
 
 @media (min-width: 768px) {
@@ -184,7 +201,6 @@ nav {
 }
 
 .hero-txt-container {
-    position: absolute;
     left: 1em;
     bottom: 1em;
     padding-right: 1em;
@@ -192,15 +208,19 @@ nav {
 
 #blog-posts-grid {
     padding: 1em;
+    margin-top: 2em;
 }
 
 @media (min-width: 768px) {
-    #blog-posts-grid {
-        padding: 3.75em;
+
+    #blog-posts-grid,
+    #more-blog-posts {
+        padding: 1.25em 4em;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2em;
+        grid-gap: 2.75em;
     }
+
 }
 
 .blog-card:hover {
@@ -210,12 +230,11 @@ nav {
 /* Footer Styling*/
 
 footer {
+    align-self: flex-end;
     background: #d0daee;
-    position: fixed;
-    height: 14px;
     bottom: 0px;
     left: 0px;
-    width: 100%;
+    width: 100vw;
 }
 
 footer p {

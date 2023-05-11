@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Main/main.css">
+    <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="about.css">
     <title>About Me</title>
 </head>
 
 <body>
-    <nav id="navbar">
-        <!--menu goes here-->
-    </nav>
     <header>
+        <nav id="navbar">
+            <!--menu goes here-->
+        </nav>
+    </header>
+
+    <section class="intro">
         <div class="portrait-container">
             <img class="portrait-img" src="../images/portrait.jpg" alt="headshot of a smiling man">
         </div>
-        <div class="header-txt">
+        <div class="intro-txt">
             <h1>Hi there! My name is Roku and welcome to my learning journal.</h1>
             <p> After several months of learning in the Frontend Developer Career Path,
                 I've made the big jump over to the Bootcamp to get expert code reviews of
                 my Solo Projects projects and meet like-minded peers.</p>
         </div>
-    </header>
+    </section>
     <main>
         <div class="body-padding">
             <h4>How I stay committed to learning</h4>
@@ -88,11 +91,20 @@
         </div>
     </section>
 
+    <section id="more-blog-posts">
+
+        <!--Additional Blog Posts go here when view-more is clicked-->
+
+    </section>
+
+    <h4 id="view-more"></h4>
+
+
     <footer id="footer">
         <!--Footer text goes here-->
     </footer>
 
-    <script src="../Main/main.js"></script>
+    <script src="../main.js"></script>
     <script src="about.js"></script>
 </body>
 
