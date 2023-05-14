@@ -19,13 +19,6 @@ section {
 
 /* Typography and text styling*/
 
-#logo-container h1 {
-    font-size: 1.25em;
-    line-height: 1.25em;
-    font-weight: 800;
-    letter-spacing: -1.5px;
-}
-
 p {
     font-size: 1em;
     line-height: 1.5em;
@@ -62,10 +55,6 @@ a {
     color: white;
 }
 
-.hero-txt-container:hover {
-    cursor: pointer;
-}
-
 @media (min-width: 768px) {
     .hero-txt-container p {
         max-width: 50vw;
@@ -73,35 +62,67 @@ a {
 }
 
 #view-more {
+    width: 8em;
     font-size: 0.9em;
     font-weight: 700;
     text-align: center;
-    margin: 1em 0em 4em;
+    margin: 0.25em auto 4em;
+    background: inherit;
+    border-style: none;
+}
+
+.hero-txt-container:hover,
+#view-more:hover,
+#view-more:active,
+nav li:hover,
+.blog-card h2:hover,
+.blog-card a,
+#hamburger-btn {
+    cursor: pointer;
 }
 
 #view-more:hover,
-#view-more:active {
-    cursor: pointer;
+#view-more:active,
+#view-more:focus,
+nav li:focus,
+nav li:hover,
+.blog-card h2:hover {
+    text-decoration: underline;
 }
 
 /* Navigation styling */
 
-nav {
+nav a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#mobile-nav-container a {
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+header {
+    padding: 0.75em 2em;
+}
+
+#logo-container {
+    width: 12.5em;
+}
+
+#heading-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4em;
-    padding: 0 1.5em;
 }
 
 #nav-links-container {
     display: none;
-    flex-direction: row;
-    gap: 2em;
 }
 
-.visible {
-    display: flex !important;
+#hamburger-btn {
+    display: block;
+    font-size: 2em;
 }
 
 #mobile-nav-container {
@@ -119,71 +140,41 @@ nav {
     z-index: 99;
 }
 
-#mobile-nav-container a {
-    font-size: 1em;
-    font-weight: 600;
-    color: whitesmoke;
-}
-
-#hamburger-btn {
-    display: block;
-    font-size: 2em;
-}
-
-#hamburger-btn:focus,
-#hamburger-btn:active {
-    border: 1px solid blue;
+.visible {
+    display: flex !important;
 }
 
 @media (min-width: 768px) {
-    nav {
-        padding: 0 2em;
+
+    #nav-links-container {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        gap: 2em;
     }
 
     #hamburger-btn {
         display: none;
     }
-
-    #nav-links-container {
-        display: flex;
-        gap: 2em;
-    }
-
-    #nav-links-container a {
-        text-transform: uppercase;
-        font-weight: 400;
-    }
-
-    #nav-links-container li:hover,
-    #nav-links-container li:focus,
-    .blog-card:hover,
-    #view-more:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
 }
 
-
 /* Image styling */
+
+img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
 
 .img-block {
     height: 45vh;
 }
 
 .img-block img {
-    height: 100%;
-    width: 100%;
-    display: block;
     border-radius: 4px;
 }
 
 /* Layout styling */
-
-#logo-container {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
 
 #hero {
     background: url("./images/half-laptop.jpg");
@@ -221,10 +212,6 @@ nav {
         grid-gap: 2.75em;
     }
 
-}
-
-.blog-card:hover {
-    cursor: pointer;
 }
 
 /* Footer Styling*/

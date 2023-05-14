@@ -17,9 +17,7 @@ h1 {
     }
 }
 
-#recent-posts:hover,
-#recent-posts:focus {
-    cursor: pointer;
+#recent-posts {
     text-decoration: underline;
 }
 

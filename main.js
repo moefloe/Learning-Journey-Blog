@@ -1,28 +1,22 @@
-
-const navBar = document.getElementById('navbar')
+const headingContainer = document.getElementById('heading-container')
 const mainBody = document.getElementById('blog-posts-grid')
 const viewMore = document.getElementById('view-more')
 const moreBlogPostsDiv = document.getElementById('more-blog-posts')
 const footerContainer = document.getElementById('footer')
 
 renderNavMenu()
-renderFooter()
 viewBlogLinks()
+renderFooter()
 
 function renderNavMenu() {
 
-    navBar.innerHTML += `        
+    headingContainer.innerHTML += `        
     <div id="logo-container">
-        <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
-        <g transform="rotate(350 8 8)"><path fill="currentColor" d="M8 1C3.6 1 0 3.5 0 6.5c0 2 2 3.8 4 
-        4.8c0 2.1-2 2.8-2 2.8c2.8 0 4.4-1.3 5.1-2.1H8c4.4 0 8-2.5 8-5.5S12.4 1 8 1zM5 8c-.6 
-        0-1-.4-1-1s.4-1 1-1s1 .4 1 1s-.4 1-1 1zm3 0c-.6 0-1-.4-1-1s.4-1 1-1s1 .4 1 1s-.4 1-1 
-        1zm3 0c-.6 0-1-.4-1-1s.4-1 1-1s1 .4 1 1s-.4 1-1 1z" />
-        </g></svg></i>
-        <h1>
-            <a href='../main.html'>My Learning Journal</a>
-        </h1>
+    <a href="../main.html">
+        <img src="../images/logo@2x.png" alt="a logo text spelling out My Learning Journey">
+    </a>
     </div>
+    <nav>
         <span id="hamburger-btn">🟰</span>
         <ul id="mobile-nav-container">
             <li class='nav-item'>
@@ -39,7 +33,8 @@ function renderNavMenu() {
             <li>
                 <a href='/About_Me/about.html'>About me</a>
             </li>
-    </ul>
+        </ul>
+    </nav>
 `
 
     // Adding an event listnener for the mobile menu
@@ -61,14 +56,6 @@ function renderNavMenu() {
     })
 }
 
-// Adding the footer dynamically through JS
-
-function renderFooter() {
-    footerContainer.innerHTML += `
-    <p>Coded by Alpha Bah for Scrimba Frontend Dev Bootcamp</p>
-    `
-}
-
 // Initially I'm rendering the link text and making the additional blog cards hidden by default
 // We will call back on this function again when the link is clicked
 
@@ -78,46 +65,52 @@ function viewBlogLinks() {
     cardsAreDisplayed = false
 }
 
-// Function to load the additional cards when called upon
+// Function to display the additional cards when called upon
 
 function renderAdditionalCards() {
 
     moreBlogPostsDiv.innerHTML = `        
     <div class="blog-card">
-        <div class="blog-text">
-            <div class="img-block">
-                <img src="/images/pen-and-paper.jpg" alt="image of a pen sitting on an open book">
+        <a href='./Journey/journey.html'>
+            <div class="blog-text">
+                <div class="img-block">
+                    <img src="/images/pen-and-paper.jpg" alt="image of a pen sitting on an open book">
+                </div>
+                <p class="date-txt">July 23, 2022</p>
+                <h2>Blog Four</h2>
+                <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                    After several months of learning in the Frontend Career Path.
+                </p>
             </div>
-            <p class="date-txt">July 23, 2022</p>
-            <h2>Blog Four</h2>
-            <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
-                After several months of learning in the Frontend Career Path.
-            </p>
-        </div>
+        </a>
     </div>
     <div class="blog-card">
-        <div class="blog-text">
-            <div class="img-block">
-                <img src="/images/tablet.jpg" alt="image of a tablet sitting on a wooden table">
+        <a href='./Journey/journey.html'>
+            <div class="blog-text">
+                <div class="img-block">
+                    <img src="/images/tablet.jpg" alt="image of a tablet sitting on a wooden table">
+                </div>
+                <p class="date-txt">July 23, 2022</p>
+                <h2>Blog Five</h2>
+                <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                    After several months of learning in the Frontend Career Path.
+                </p>
             </div>
-            <p class="date-txt">July 23, 2022</p>
-            <h2>Blog Five</h2>
-            <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
-                After several months of learning in the Frontend Career Path.
-            </p>
-        </div>
+        </a>
     </div>
     <div class="blog-card">
-        <div class="blog-text">
-            <div class="img-block">
-                <img src="/images/typing.jpg" alt="image of hands typing on a laptop">
+        <a href='./Journey/journey.html'>
+            <div class="blog-text">
+                <div class="img-block">
+                    <img src="/images/typing.jpg" alt="image of hands typing on a laptop">
+                </div>
+                <p class="date">July 23, 2022</p>
+                <h2>Blog Six</h2>
+                <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                    After several months of learning in the Frontend Career Path.
+                </p>
             </div>
-            <p class="date">July 23, 2022</p>
-            <h2>Blog Six</h2>
-            <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
-                After several months of learning in the Frontend Career Path.
-            </p>
-        </div>
+        </a>
     </div>`
 }
 
@@ -132,3 +125,11 @@ viewMore.addEventListener('click', function () {
         viewBlogLinks()
     }
 })
+
+// Adding the footer dynamically through JS
+
+function renderFooter() {
+    footerContainer.innerHTML += `
+    <p>Coded by Alpha Bah for Scrimba Frontend Dev Bootcamp</p>
+    `
+}

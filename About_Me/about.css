@@ -19,9 +19,7 @@
     text-align: center;
 }
 
-#recent-posts:hover,
-#recent-posts:focus {
-    cursor: pointer;
+#recent-posts {
     text-decoration: underline;
 }
 
