@@ -14,7 +14,7 @@ function renderNavMenu() {
 
     headingContainer.innerHTML += `        
     <div id="logo-container">
-    <a href="main.html">
+    <a href="index.html">
         <img src="../images/logo@2x.png" alt="a logo text spelling out My Learning Journey">
     </a>
     </div>
@@ -22,7 +22,7 @@ function renderNavMenu() {
         <span id="hamburger-btn">🟰</span>
         <ul id="mobile-nav-container">
             <li class='nav-item'>
-                <a href='main.html'>Home</a>
+                <a href='index.html'>Home</a>
             </li>
             <li class='nav-item'>
                 <a href='about.html'>About me</a>
@@ -30,7 +30,7 @@ function renderNavMenu() {
         </ul>
         <ul id="nav-links-container">
             <li>
-                <a href='main.html'>Home</a>
+                <a href='index.html'>Home</a>
             </li>
             <li>
                 <a href='about.html'>About me</a>
