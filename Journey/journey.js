@@ -9,7 +9,7 @@ function renderRecentPosts() {
     <h4 id="recent-posts">Recent Posts</h4>
     <div id="blog-posts-grid">
         <div class="blog-card">
-            <a href="../Journey/journey.html">
+            <a href="journey.html">
                 <div class="blog-text">
                     <div class="img-block">
                         <img src="../images/open-laptop.jpg" alt="">
@@ -23,7 +23,7 @@ function renderRecentPosts() {
             </a>
         </div>
         <div class="blog-card">
-            <a href="../Journey/journey.html">
+            <a href="journey.html">
                 <div class="blog-text">
                     <div class="img-block">
                         <img src="../images/passion.jpg" alt="">
@@ -37,7 +37,7 @@ function renderRecentPosts() {
             </a>
         </div>
         <div class="blog-card">
-            <a href="../Journey/journey.html">
+            <a href="journey.html">
                 <div class="blog-text">
                     <div class="img-block">
                         <img src="../images/tablet.jpg" alt="">
