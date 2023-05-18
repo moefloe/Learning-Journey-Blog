@@ -2,8 +2,6 @@ const recentPostsDiv = document.getElementById('recent-posts-container')
 
 // This same function is present on the other pages except the main one
 
-renderRecentPosts()
-
 function renderRecentPosts() {
     recentPostsDiv.innerHTML = `
     <h4 id="recent-posts">Recent Posts</h4>
@@ -53,3 +51,5 @@ function renderRecentPosts() {
     </div> 
     `
 }
+
+renderRecentPosts()
