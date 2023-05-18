@@ -2,7 +2,7 @@ const recentPostsDiv = document.getElementById('recent-posts-container')
 
 // This same function is present on any page that has Recent Posts present
 
-renderRecentPosts()
+
 
 function renderRecentPosts() {
     recentPostsDiv.innerHTML = `
@@ -53,3 +53,5 @@ function renderRecentPosts() {
     </div> 
     `
 }
+
+renderRecentPosts()
