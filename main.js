@@ -4,6 +4,8 @@ const viewMore = document.getElementById('view-more')
 const moreBlogPostsDiv = document.getElementById('more-blog-posts')
 const footerContainer = document.getElementById('footer')
 
+let cardsAreDisplayed = false
+
 renderNavMenu()
 viewBlogLinks()
 renderFooter()
@@ -71,7 +73,7 @@ function renderAdditionalCards() {
 
     moreBlogPostsDiv.innerHTML = `        
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='../Journey/journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/pen-and-paper.jpg" alt="image of a pen sitting on an open book">
@@ -85,7 +87,7 @@ function renderAdditionalCards() {
         </a>
     </div>
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='../Journey/journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/tablet.jpg" alt="image of a tablet sitting on a wooden table">
@@ -99,7 +101,7 @@ function renderAdditionalCards() {
         </a>
     </div>
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='../Journey/journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/typing.jpg" alt="image of hands typing on a laptop">
@@ -117,6 +119,7 @@ function renderAdditionalCards() {
 // Event listener to toggle the additional blog cards and update the view-more text
 
 viewMore.addEventListener('click', function () {
+    console.log("clicked")
     if (!cardsAreDisplayed) {
         renderAdditionalCards()
         cardsAreDisplayed = true
