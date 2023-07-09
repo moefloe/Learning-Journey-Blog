@@ -4,6 +4,8 @@ const viewMore = document.getElementById('view-more')
 const moreBlogPostsDiv = document.getElementById('more-blog-posts')
 const footerContainer = document.getElementById('footer')
 
+let cardsAreDisplayed = false
+
 renderNavMenu()
 viewBlogLinks()
 renderFooter()
@@ -12,7 +14,7 @@ function renderNavMenu() {
 
     headingContainer.innerHTML += `        
     <div id="logo-container">
-    <a href="../main.html">
+    <a href="index.html">
         <img src="../images/logo@2x.png" alt="a logo text spelling out My Learning Journey">
     </a>
     </div>
@@ -20,18 +22,18 @@ function renderNavMenu() {
         <span id="hamburger-btn">🟰</span>
         <ul id="mobile-nav-container">
             <li class='nav-item'>
-                <a href='../main.html'>Home</a>
+                <a href='index.html'>Home</a>
             </li>
             <li class='nav-item'>
-                <a href='/About_Me/about.html'>About me</a>
+                <a href='about.html'>About me</a>
             </li>
         </ul>
         <ul id="nav-links-container">
             <li>
-                <a href='../main.html'>Home</a>
+                <a href='index.html'>Home</a>
             </li>
             <li>
-                <a href='/About_Me/about.html'>About me</a>
+                <a href='about.html'>About me</a>
             </li>
         </ul>
     </nav>
@@ -71,7 +73,7 @@ function renderAdditionalCards() {
 
     moreBlogPostsDiv.innerHTML = `        
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/pen-and-paper.jpg" alt="image of a pen sitting on an open book">
@@ -85,7 +87,7 @@ function renderAdditionalCards() {
         </a>
     </div>
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/tablet.jpg" alt="image of a tablet sitting on a wooden table">
@@ -99,7 +101,7 @@ function renderAdditionalCards() {
         </a>
     </div>
     <div class="blog-card">
-        <a href='./Journey/journey.html'>
+        <a href='journey.html'>
             <div class="blog-text">
                 <div class="img-block">
                     <img src="/images/typing.jpg" alt="image of hands typing on a laptop">
@@ -117,6 +119,7 @@ function renderAdditionalCards() {
 // Event listener to toggle the additional blog cards and update the view-more text
 
 viewMore.addEventListener('click', function () {
+    console.log("clicked")
     if (!cardsAreDisplayed) {
         renderAdditionalCards()
         cardsAreDisplayed = true
@@ -133,3 +136,60 @@ function renderFooter() {
     <p>Coded by Alpha Bah for Scrimba Frontend Dev Bootcamp</p>
     `
 }
+
+
+const recentPostsDiv = document.getElementById('recent-posts-container')
+
+// This same function is present on the other pages except the main one
+
+function renderRecentPosts() {
+    recentPostsDiv.innerHTML = `
+    <h4 id="recent-posts">Recent Posts</h4>
+    <div id="blog-posts-grid">
+        <div class="blog-card">
+            <a href="journey.html">
+                <div class="blog-text">
+                    <div class="img-block">
+                        <img src="../images/open-laptop.jpg" alt="">
+                    </div>
+                    <p class="date-txt">July 23, 2022</p>
+                    <h2>Blog One</h2>
+                    <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                        After several months of learning in the Frontend Career Path.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="blog-card">
+            <a href="journey.html">
+                <div class="blog-text">
+                    <div class="img-block">
+                        <img src="../images/passion.jpg" alt="">
+                    </div>
+                    <p class="date-txt">July 23, 2022</p>
+                    <h2>Blog Two</h2>
+                    <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                        After several months of learning in the Frontend Career Path.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="blog-card">
+            <a href="journey.html">
+                <div class="blog-text">
+                    <div class="img-block">
+                        <img src="../images/tablet.jpg" alt="">
+                    </div>
+                    <p class="date-txt">July 23, 2022</p>
+                    <h2>Blog Three</h2>
+                    <p>I'm excited to start a new learing journey as a Scrimba Bootcamp student!
+                        After several months of learning in the Frontend Career Path.
+                    </p>
+                </div>
+                </a>
+        </div>
+    </div> 
+    `
+}
+
+renderRecentPosts()
